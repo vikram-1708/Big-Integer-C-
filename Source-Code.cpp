@@ -17,11 +17,11 @@ vector<int> add_biginteger(vector<int>x,vector<int>y)
 	reverse(x.begin(),x.end());
 	reverse(y.begin(),y.end());
 	
-	int length = min(x.size(),y.size()),i;
+	int length = min(x.size(),y.size());
 	
 	int carry=0;
 	vector<int>answer;
-	for(i=0;i<length;i++)
+	for(int i = 0 ; i < length ; i++)
 	{
 		int value = x[i] + y[i] + carry;
 		carry = value/10;
@@ -29,25 +29,25 @@ vector<int> add_biginteger(vector<int>x,vector<int>y)
 	}
 	if(x.size() > length)
 	{
-		for(i=length;i<x.size();i++)
+		for(int i = length ; i < x.size() ; i++)
 		{
-			int value = x[i] + carry;
+		    int value = x[i] + carry;
 		    carry = value/10;
 		    answer.pb(value%10); 
 		}
 	}
 	else if(y.size() > length)
 	{
-		for(i=length;i<y.size();i++)
+		for(int i = length ; i < y.size() ; i++)
 		{
-			int value = y[i] + carry;
+		    int value = y[i] + carry;
 		    carry = value/10;
 		    answer.pb(value%10); 
 		}
 	}
-	while(carry>0)
+	while(carry > 0)
 	{
-		answer.pb(carry);
+		answer.pb(carry%10);
 		carry = carry/10;
 	}
 	reverse(answer.begin(),answer.end());
