@@ -65,7 +65,7 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 	{
 		if(x[i] < y[i])
 		{
-			x[i+1] = x[i+1]-1;
+			x[i+1]--;
 			ans.pb(10 + x[i] - y[i]);
 		}
 		else
@@ -80,7 +80,7 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 			if(x[i] < 0)
 			{
 				x[i+1]--;
-				ans.pb(x[i]*10);
+				ans.pb(10 + x[i]);
 			}
 			else
 			{
