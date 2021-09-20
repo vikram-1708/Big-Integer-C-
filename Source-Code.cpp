@@ -102,7 +102,7 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 	return result;
 }
 
-vector<int> divisionby2(vector<int>x)
+vector<int> divisionby2(vector<int>x) // it gives quotient when divided by 2.. we can also get quotient for any divisor using the same concept
 {
 	vector<int>ans;
 	int remainder = 0;
