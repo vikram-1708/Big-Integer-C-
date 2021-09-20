@@ -59,9 +59,9 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 	reverse(x.begin(),x.end());
 	reverse(y.begin(),y.end());
 	
-	int length = y.size(),i;
+	int length = y.size();
 	vector<int>ans;
-	for(i=0;i<y.size();i++)
+	for(int i = 0 ; i < y.size() ; i++)
 	{
 		if(x[i] < y[i])
 		{
@@ -75,7 +75,7 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 	}
 	if(x.size() > length)
 	{
-		for(i=length;i<x.size();i++)
+		for(int i = length ; i < x.size() ; i++)
 		{
 			if(x[i] < 0)
 			{
@@ -89,13 +89,13 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 		}
 	}
 	vector<int>result;
-	i=0;
+	int i=0;
 	reverse(ans.begin(),ans.end());
 	while(ans[i] == 0)
 	{
 		i++;
 	}
-	for(;i<ans.size();i++)
+	for( ; i < ans.size() ; i++)
 	{
 		result.pb(ans[i]);
 	}
@@ -105,8 +105,8 @@ vector<int> subtraction(vector<int>x,vector<int>y)
 vector<int> divisionby2(vector<int>x)
 {
 	vector<int>ans;
-	int remainder = 0,i;
-	for(i=0;i<x.size();i++)
+	int remainder = 0;
+	for(int i = 0 ; i < x.size() ; i++)
 	{
 		if(remainder == 0)
 		{
@@ -129,12 +129,12 @@ vector<int> divisionby2(vector<int>x)
 		}
 	}
 	vector<int>result;
-	i=0;
+	int i=0;
 	while(ans[i] == 0)
 	{
 		i++;
 	}
-	for(;i<ans.size();i++)
+	for(; i < ans.size() ; i++)
 	{
 		result.pb(ans[i]);
 	}
@@ -145,7 +145,7 @@ void multiply(vector<int>&ans,int number)
 {
 	int carry = 0;
 	
-	for(int i=0;i<ans.size();i++)
+	for(int i=0 ; i < ans.size() ; i++)
 	{
 		int product =  (ans[i]*1LL*number) + carry;
 		carry = product/10;
@@ -163,7 +163,7 @@ vector<int> factorial(int n)
 	
 	ans.pb(1);
 	
-	for(int i=2;i<=n;i++)
+	for(int i = 2 ; i <= n ; i++)
 	{
 		multiply(ans,i);
 	}
@@ -180,18 +180,18 @@ int32_t main()
    
    vector<int>v1,v2;
    
-   for(int i=0;i<a.size();i++)
+   for(int i = 0 ; i < a.size() ; i++)
    {
    	v1.pb(a[i]-'0');
    }
-   for(int i=0;i<b.size();i++)
+   for(int i=0 ; i < b.size() ; i++)
    {
    	v2.pb(b[i]-'0');
    }
    
    vector<int>sum = add_biginteger(v1,v2);
    
-   for(int i=0;i<sum.size();i++)
+   for(int i = 0 ; i < sum.size() ; i++)
    {
    	cout<<sum[i];
    }
@@ -199,7 +199,7 @@ int32_t main()
    
    vector<int>subtract = subtraction(v1,v2);
    
-   for(int i=0;i<subtract.size();i++)
+   for(int i = 0 ; i < subtract.size() ; i++)
    {
    	cout<<subtract[i];
    }
@@ -207,7 +207,7 @@ int32_t main()
     
    vector<int>fact = factorial(16);
    
-   for(int i=0;i<fact.size();i++)
+   for(int i = 0 ; i < fact.size() ; i++)
    {
    	cout<<fact[i];
    }
@@ -215,7 +215,7 @@ int32_t main()
 
    vector<int>divide = divisionby2(v1);
    
-   for(int i=0;i<divide.size();i++)
+   for(int i = 0; i < divide.size() ; i++)
    {
    	cout<<divide[i];
    }
