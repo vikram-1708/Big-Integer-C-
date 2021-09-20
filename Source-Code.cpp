@@ -12,7 +12,7 @@ using namespace std;
 #define PI 3.14159265359
  
 
-vector<int> add_biginteger(vector<int>x,vector<int>y)
+vector<int> add_biginteger(vector<int>x,vector<int>y) 
 {
 	reverse(x.begin(),x.end());
 	reverse(y.begin(),y.end());
@@ -54,7 +54,7 @@ vector<int> add_biginteger(vector<int>x,vector<int>y)
 	return answer;
 }
 
-vector<int> subtraction(vector<int>x,vector<int>y)
+vector<int> subtraction(vector<int>x,vector<int>y) 
 {
 	reverse(x.begin(),x.end());
 	reverse(y.begin(),y.end());
@@ -145,7 +145,7 @@ void multiply(vector<int>&ans,int number)
 {
 	int carry = 0;
 	
-	for(int i=0 ; i < ans.size() ; i++)
+	for(int i = 0 ; i < ans.size() ; i++)
 	{
 		int product =  (ans[i]*1LL*number) + carry;
 		carry = product/10;
@@ -184,7 +184,7 @@ int32_t main()
    {
    	v1.pb(a[i]-'0');
    }
-   for(int i=0 ; i < b.size() ; i++)
+   for(int i = 0 ; i < b.size() ; i++)
    {
    	v2.pb(b[i]-'0');
    }
